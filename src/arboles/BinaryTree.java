@@ -1,4 +1,4 @@
 package arboles;
-public class BinaryTree<E> extends Tree{
+public class BinaryTree<E> extends Tree<E>{
     
 }

@@ -1,4 +1,4 @@
 package arboles;
-public class GeneralTree<E> extends Tree{
+public class GeneralTree<E> extends Tree<E>{
     
 }
