@@ -1,4 +1,4 @@
-
+package nodos;
 import java.util.LinkedList;
 
 public class BinaryNode<E> extends Node<E>{
@@ -11,7 +11,7 @@ public class BinaryNode<E> extends Node<E>{
     public LinkedList<Node<E>> getSons() {
         LinkedList<Node<E>> list = new LinkedList<>();
         list.add(this.getLeft());
-        list.add(this.getRigth());
+        list.add(this.getRight());
         return list;
 
     }

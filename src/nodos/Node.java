@@ -1,11 +1,13 @@
 package nodos;
 
+import java.util.LinkedList;
+
 public abstract class Node<E> {
     protected E info;
     protected Node<E> left;
-    protected Node<E> rigth;
+    protected Node<E> right;
 
-    public Node(E info) {
+    protected Node(E info) {
         this.info = info;
     }
 
@@ -27,15 +29,26 @@ public abstract class Node<E> {
         this.left = left;
     }
 
-    public Node<E> getRigth() {
-        return rigth;
+    public Node<E> getRight() {
+        return right;
     }
 
-    public void setRigth(Node<E> rigth) {
-        this.rigth = rigth;
+    public void setRight(Node<E> rigth) {
+        this.right = rigth;
     }
 
     public boolean isLeave(){
-        return (getLeft()==null && getRigth()==null);    }
+        return (getLeft()==null && getRight()==null);    }
+
+    public boolean add(E element) {
+        return false;
+    }
+
+    public Node<E> getParent() {
+        return null;
+    }
+
+    public void removeChild(Node<E> actual) {
+    }
 }
 

@@ -11,7 +11,7 @@ public class AVLNode<E> extends BSTNode<E> {
     public int getBalance(){
         int balance;
         AVLNode<E> nodeLeft= (AVLNode<E>) this.getLeft();
-        AVLNode<E> nodeRigth= (AVLNode<E>) this.getRigth();
+        AVLNode<E> nodeRigth= (AVLNode<E>) this.getRight();
         if(nodeLeft==null && nodeRigth==null )
             balance=0;
         else if(nodeLeft==null)
@@ -30,7 +30,7 @@ public class AVLNode<E> extends BSTNode<E> {
 
     public void heigthRefresh(){
         AVLNode<E> nodeLeft= (AVLNode<E>) this.getLeft();
-        AVLNode<E> nodeRigth= (AVLNode<E>) this.getRigth();
+        AVLNode<E> nodeRigth= (AVLNode<E>) this.getRight();
         if(nodeLeft==null && nodeRigth==null )
             this.height=1;
         else if(nodeLeft==null)

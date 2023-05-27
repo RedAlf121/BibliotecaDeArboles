@@ -1,4 +1,4 @@
-
+package nodos;
 public class BSTNode<E> extends BinaryNode<E> {
     protected BSTNode<E> father;
 

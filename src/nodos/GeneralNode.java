@@ -1,4 +1,4 @@
-
+package nodos;
 import java.util.LinkedList;
 
 public class GeneralNode<E> extends Node<E>{
@@ -13,11 +13,11 @@ public class GeneralNode<E> extends Node<E>{
 
         if(nodeAux!=null) {
             list.add(nodeAux);
-            nodeAux=nodeAux.getRigth();
+            nodeAux=nodeAux.getRight();
 
             while(nodeAux!=null){
                 list.add(nodeAux);
-                nodeAux=nodeAux.getRigth();
+                nodeAux=nodeAux.getRight();
             }
         }
         return list;
@@ -28,6 +28,6 @@ public class GeneralNode<E> extends Node<E>{
     }
 
     public Node<E> getBrother(){
-        return this.getRigth();
+        return this.getRight();
     }
 }
