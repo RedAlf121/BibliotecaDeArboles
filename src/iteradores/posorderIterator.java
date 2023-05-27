@@ -1,7 +1,6 @@
 package iteradores;
 
 import java.util.HashMap;
-import java.util.LinkedList;
 
 import arboles.Tree;
 import nodos.BinaryNode;
@@ -11,6 +10,7 @@ public class PosorderIterator<E> extends DepthIterator<E>{
     private HashMap<Node<E>,Boolean> visited;
     public PosorderIterator(Tree<E> toIterate) {
         super(toIterate);
+        visited = new HashMap<Node<E>,Boolean>();
         visited.put(actual, true);
     }
     
@@ -24,7 +24,7 @@ public class PosorderIterator<E> extends DepthIterator<E>{
             addToStack(itLeft);
             itLeft = (BinaryNode<E>) itLeft.getLeft();
         }
-        while(itRight != null && !visited.getOrDefault(itLeft, false))
+        while(itRight != null && !visited.getOrDefault(itRight, false))
         {
             addToStack(itRight);
             itRight = (BinaryNode<E>) itRight.getRight();   
