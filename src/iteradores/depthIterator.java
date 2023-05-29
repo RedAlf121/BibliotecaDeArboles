@@ -16,11 +16,12 @@ public class DepthIterator<E> extends TreeIterator<E>{
 
     @Override
     public E next() {
+        actual = visitorStack.removeFirst();
         LinkedList<Node<E>> sonList = (previous==null)? new LinkedList<Node<E>>():previous.getSons();
         while(!sonList.isEmpty())
             visitorStack.addFirst(sonList.removeLast());
-        previous = visitorStack.removeFirst();
-        return previous.getInfo();
+        previous = actual;
+        return actual.getInfo();
     }
 
 

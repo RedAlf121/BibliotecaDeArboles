@@ -18,11 +18,12 @@ public class BreadthIterator<E> extends TreeIterator<E>{
 
     @Override
     public E next() {
+        actual = visitorQueue.poll();
         List<Node<E>> sonList = (previous==null)? new LinkedList<Node<E>>():previous.getSons();
         for(Node<E> son : sonList)
             visitorQueue.offer(son);
-        previous = visitorQueue.poll();
-        return previous.getInfo();
+        previous = actual;
+        return actual.getInfo();
     }
     
     @Override
